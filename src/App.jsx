@@ -43,7 +43,7 @@ function App() {
   return (
     <>
   
-    <Router>
+    <Router basename="/LibertySS-College-Web">
       <Routes>
         <Route  element={<MainLayout/>}>
             <Route path='/' element={<Home/>} ></Route> 
