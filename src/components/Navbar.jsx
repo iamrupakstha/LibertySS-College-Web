@@ -51,10 +51,6 @@ const Navbar = () => {
                     <p><FontAwesomeIcon className='icon' icon={faEnvelope} /> <span>info.libertysscollege@gmail.com</span> </p>
                     <p><FontAwesomeIcon className='icon' icon={faLocationDot} /> <span>Old Bhadrapur Road, Birtamode-5, Jhapa</span></p>
                 </div>
-                <div className="Btn">
-                    <NavLink to="./enquiry" className="enquiryBtn">Enquiry</NavLink>
-                    <NavLink to="" className="loginBtn" onClick={loginAlert} >Login</NavLink>
-                </div>
             </div>
         </div>
 
@@ -95,9 +91,6 @@ const Navbar = () => {
                                     <NavLink to='/about' className={({ isActive }) => isActive ? "active" : ""}>About Us</NavLink>
                                 </li>
                                 <li onClick={() => { setMenuOpen(false); setOpenDropdown(null); }}>
-                                    <NavLink to='/academics' className={({ isActive }) => isActive ? "active" : ""}>Academics</NavLink>
-                                </li>
-                                <li onClick={() => { setMenuOpen(false); setOpenDropdown(null); }}>
                                     <NavLink to='/message' className={({ isActive }) => isActive ? "active" : ""}>Message</NavLink>
                                 </li>
                                 <li onClick={() => { setMenuOpen(false); setOpenDropdown(null); }}>
@@ -133,21 +126,6 @@ const Navbar = () => {
                         <li onClick={() => setMenuOpen(false)}>
                             <NavLink to="/facilities" className={({ isActive }) => isActive ? "active" : ""}>
                                 Facilities
-                            </NavLink>
-                        </li>
-                        <li onClick={() => setMenuOpen(false)}>
-                            <NavLink to="/notice" className={({ isActive }) => isActive ? "active" : ""}>
-                                Notice
-                            </NavLink>
-                        </li>
-                        <li onClick={() => setMenuOpen(false)}>
-                            <NavLink to="/resources" className={({ isActive }) => isActive ? "active" : ""}>
-                                Resources
-                            </NavLink>
-                        </li>
-                        <li onClick={() => setMenuOpen(false)}>
-                            <NavLink to="/gallery" className={({ isActive }) => isActive ? "active" : ""}>
-                                Gallery
                             </NavLink>
                         </li>
                         <li onClick={() => setMenuOpen(false)}>
