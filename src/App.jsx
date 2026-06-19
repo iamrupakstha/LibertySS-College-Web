@@ -6,13 +6,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MainLayout from './Layout/MainLayout';
 import { useEffect, useState } from 'react';
 import Spinner from './components/Spinner';
-import Academics from './pages/Academics';
 import {  faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import Team from './pages/Team';
 import Message from './pages/Message';
 import Science from './pages/Science';
-import { Management } from './pages/Management';
+import Management from './pages/Management';
 import HM from './pages/HM';
+import ScrollToTop from './components/ScrollToTop';
+import Contact from './pages/Contact';
+import Facilities from './pages/Facilities';
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -36,6 +38,7 @@ function App() {
   return (
     <>
     <Router basename="/LibertySS-College-Web">
+      <ScrollToTop />
       <Routes>
         <Route  element={<MainLayout/>}>
             <Route path='/' element={<Home/>} ></Route> 
@@ -43,7 +46,6 @@ function App() {
             {/* Overview */}
             <Route path='/about' element={<About/>} ></Route>
 
-            <Route path='/academics' element={<Academics/>} ></Route>
             <Route path='/message' element={<Message/>} ></Route>
             <Route path='/team' element={<Team/>} ></Route>
             
@@ -52,9 +54,8 @@ function App() {
             <Route path='/management' element={<Management/>} ></Route>
             <Route path='/hm' element={<HM/>} ></Route>
             
-            <Route path='/resources' element={<Home/>} ></Route>
-            <Route path='/gallery' element={<About/>} ></Route>
-            <Route path='/contact' element={<Home/>} ></Route>
+            <Route path='/contact' element={<Contact/>} ></Route>
+            <Route path='/facilities' element={<Facilities/>} ></Route>
         </Route>
       </Routes>
     </Router>

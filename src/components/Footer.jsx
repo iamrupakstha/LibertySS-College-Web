@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import '../styles/Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faInstagram, faLinkedinIn, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import Logo from '../assets/logo/Logo.png'
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
 
@@ -21,12 +21,8 @@ const Footer = () => {
                     <div className="line"></div>
                 </div>
 
-                <div className="enquiry">
-                    <button>Apply Now</button>
-                    <button>Contact Now</button>
                 </div>
             </div>
-        </div>
       <div className="footer"> 
         <div className="f-left">
           <img src={Logo} alt="Footer logo" />
@@ -36,37 +32,20 @@ const Footer = () => {
     <a href="https://facebook.com/libertysscollege" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faFacebookF} />
     </a>
-    <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer">
+    <a href="https://instagram.com/liberty_ss_college_btm" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faInstagram} />
     </a>
-    <a href="https://tiktok.com/@yourpage" target="_blank" rel="noopener noreferrer">
+    <a href="https://tiktok.com/@libertysscollege" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faTiktok} />
     </a>
-    <a href="https://youtube.com/c/yourchannel" target="_blank" rel="noopener noreferrer">
+    <a href="https://youtube.com/@libertysscollegebirtamod" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faYoutube} />
+    </a>
+    <a href="https://linkedin.com/company/liberty-ss-college-birtamode" target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon icon={faLinkedinIn} />
     </a>
 </div>
 </div>
-        <div className="resources">
-            <h3>Resources</h3>
-            <ul>
-            <li>
-                <NavLink to="/courses" className='link'>
-                    Courses
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to="/gallery" >
-                    Gallery
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to="/resources" >
-                    Downloads
-                </NavLink>
-            </li>
-            </ul>
-        </div>
 
         <div className="quick-links">
              <h3>Quick Links</h3>
@@ -98,10 +77,10 @@ const Footer = () => {
         <div className="contact">
             <h4>Get in Touch </h4>
 
-            <p><FontAwesomeIcon className='icon' icon={faLocationDot} /> <span>Old Bhadrapur Road <br /> Britamode-5, Jhapa</span></p>
+            <a href="https://www.google.com/maps/search/Anarmani+Liberty+School+Birtamod" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className='icon' icon={faLocationDot} /> <span>Old Bhadrapur Road <br /> Britamode-5, Jhapa</span></a>
 
-            <p><FontAwesomeIcon className='icon' icon={faPhone} /><span>9805073555<br /> 9842774390</span></p>
-            <p><FontAwesomeIcon className='icon' icon={faEnvelope} /><span>info.libertysscollege@gmail.com</span></p> 
+            <a href="tel:9805073555"><FontAwesomeIcon className='icon' icon={faPhone} /><span>9805073555<br /> 9842774390</span></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info.libertysscollege@gmail.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className='icon' icon={faEnvelope} /><span>info.libertysscollege@gmail.com</span></a>
         </div>
 
         </div>

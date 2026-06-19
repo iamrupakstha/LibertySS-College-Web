@@ -6,11 +6,17 @@ import Spinner from '../components/Spinner'
 import PopupNotice from '../components/PopupNotice'
 
 const MainLayout = () => {
-  const [loading, setLoading] = useState(true);
-  const [showPopup, setShowPopup] =useState(false);
+    const [showPopup, setShowPopup] = useState(false);
+    const location = useLocation();
 
-  const location = useLocation();
+    useEffect(() => {
+        const isHomePage = window.location.pathname === '/' || window.location.pathname === '/LibertySS-College-Web/';
+        if (isHomePage) {
+            setShowPopup(true);
+        }
+    }, []);
 
+<<<<<<< HEAD
   // first load
   useEffect(() => {
     const navEntries = performance.getEntriesByType('navigation');
@@ -56,9 +62,22 @@ const MainLayout = () => {
         <Footer/>
       </>
       )
+=======
+    const handleClosePopup = () => {
+        setShowPopup(false);
+>>>>>>> 4d256a67b157a3f54204c8bd7b518c85e731ac25
     }
-    </div>
-  )
+
+    return (
+        <div>
+            {showPopup && <PopupNotice onClose={handleClosePopup} />}
+            <Navbar/>
+            <main>
+                <Outlet/>
+            </main>
+            <Footer/>
+        </div>
+    )
 }
 
 export default MainLayout

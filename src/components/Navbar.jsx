@@ -46,14 +46,9 @@ const Navbar = () => {
         <div className="topNav">
             <div className="container">
                 <div className="contact-left">
-                    <p><FontAwesomeIcon className='icon' icon={faPhone} /> <span>9805073555/
-                    9842774390</span> </p>
-                    <p><FontAwesomeIcon className='icon' icon={faEnvelope} /> <span>info.libertysscollege@gmail.com</span> </p>
-                    <p><FontAwesomeIcon className='icon' icon={faLocationDot} /> <span>Old Bhadrapur Road, Birtamode-5, Jhapa</span></p>
-                </div>
-                <div className="Btn">
-                    <NavLink to="./enquiry" className="enquiryBtn">Enquiry</NavLink>
-                    <NavLink to="" className="loginBtn" onClick={loginAlert} >Login</NavLink>
+                    <a href="tel:9805073555"><FontAwesomeIcon className='icon' icon={faPhone} /> <span>9805073555/9842774390</span></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info.libertysscollege@gmail.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className='icon' icon={faEnvelope} /> <span>info.libertysscollege@gmail.com</span></a>
+                    <a href="https://www.google.com/maps/search/Anarmani+Liberty+School+Birtamod" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className='icon' icon={faLocationDot} /> <span>Old Bhadrapur Road, Birtamode-5, Jhapa</span></a>
                 </div>
             </div>
         </div>
@@ -95,9 +90,6 @@ const Navbar = () => {
                                     <NavLink to='/about' className={({ isActive }) => isActive ? "active" : ""}>About Us</NavLink>
                                 </li>
                                 <li onClick={() => { setMenuOpen(false); setOpenDropdown(null); }}>
-                                    <NavLink to='/academics' className={({ isActive }) => isActive ? "active" : ""}>Academics</NavLink>
-                                </li>
-                                <li onClick={() => { setMenuOpen(false); setOpenDropdown(null); }}>
                                     <NavLink to='/message' className={({ isActive }) => isActive ? "active" : ""}>Message</NavLink>
                                 </li>
                                 <li onClick={() => { setMenuOpen(false); setOpenDropdown(null); }}>
@@ -133,21 +125,6 @@ const Navbar = () => {
                         <li onClick={() => setMenuOpen(false)}>
                             <NavLink to="/facilities" className={({ isActive }) => isActive ? "active" : ""}>
                                 Facilities
-                            </NavLink>
-                        </li>
-                        <li onClick={() => setMenuOpen(false)}>
-                            <NavLink to="/notice" className={({ isActive }) => isActive ? "active" : ""}>
-                                Notice
-                            </NavLink>
-                        </li>
-                        <li onClick={() => setMenuOpen(false)}>
-                            <NavLink to="/resources" className={({ isActive }) => isActive ? "active" : ""}>
-                                Resources
-                            </NavLink>
-                        </li>
-                        <li onClick={() => setMenuOpen(false)}>
-                            <NavLink to="/gallery" className={({ isActive }) => isActive ? "active" : ""}>
-                                Gallery
                             </NavLink>
                         </li>
                         <li onClick={() => setMenuOpen(false)}>
