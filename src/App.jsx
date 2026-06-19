@@ -14,6 +14,7 @@ import Management from './pages/Management';
 import HM from './pages/HM';
 import ScrollToTop from './components/ScrollToTop';
 import Contact from './pages/Contact';
+import Facilities from './pages/Facilities';
 
 function App() {
 
@@ -62,6 +63,7 @@ function App() {
             <Route path='/hm' element={<HM/>} ></Route>
             
             <Route path='/contact' element={<Contact/>} ></Route>
+            <Route path='/facilities' element={<Facilities/>} ></Route>
         </Route>
 
         

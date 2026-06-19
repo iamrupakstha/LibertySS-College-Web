@@ -46,10 +46,9 @@ const Navbar = () => {
         <div className="topNav">
             <div className="container">
                 <div className="contact-left">
-                    <p><FontAwesomeIcon className='icon' icon={faPhone} /> <span>9805073555/
-                    9842774390</span> </p>
-                    <p><FontAwesomeIcon className='icon' icon={faEnvelope} /> <span>info.libertysscollege@gmail.com</span> </p>
-                    <p><FontAwesomeIcon className='icon' icon={faLocationDot} /> <span>Old Bhadrapur Road, Birtamode-5, Jhapa</span></p>
+                    <a href="tel:9805073555"><FontAwesomeIcon className='icon' icon={faPhone} /> <span>9805073555/9842774390</span></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info.libertysscollege@gmail.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className='icon' icon={faEnvelope} /> <span>info.libertysscollege@gmail.com</span></a>
+                    <a href="https://www.google.com/maps/search/Anarmani+Liberty+School+Birtamod" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className='icon' icon={faLocationDot} /> <span>Old Bhadrapur Road, Birtamode-5, Jhapa</span></a>
                 </div>
             </div>
         </div>

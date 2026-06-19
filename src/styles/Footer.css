@@ -308,7 +308,8 @@
     margin-bottom: 20px;
 }
 
-.contact p {
+.contact p,
+.contact a {
     color: var(--text-light);
     font-size: 0.9rem;
     cursor: pointer;
@@ -319,15 +320,17 @@
     justify-content: left;
     align-items: center;
     gap: 1rem;
+    text-decoration: none;
 }
-.contact p:hover {
+.contact p:hover,
+.contact a:hover {
     color: var(--primary-color);
 }
-.contact p .icon {
+.contact p .icon,
+.contact a .icon {
     color: var(--primary-color);
     font-weight: bold;
     font-size: 1rem;
-
 }
 
 /* Divider */
@@ -505,7 +508,8 @@ hr {
         font-size: 0.8rem;
     }
     
-    .contact p {
+    .contact p,
+    .contact a {
         font-size: 0.8rem;
     }
     
