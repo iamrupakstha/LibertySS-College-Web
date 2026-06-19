@@ -15,11 +15,7 @@ import { Management } from './pages/Management';
 import HM from './pages/HM';
 
 function App() {
-
-  
-
   const [visible, setVisible] = useState(false);
-
   useEffect( () => {
     const toggleVisibility = () => {
         setVisible(window.scrollY > 200)
@@ -37,12 +33,8 @@ function App() {
   function scrolltoTop() {
     window.scrollTo({top:0, left: 0, behavior: 'smooth'})
   }
-
-
-
   return (
     <>
-  
     <Router basename="/LibertySS-College-Web">
       <Routes>
         <Route  element={<MainLayout/>}>
@@ -64,12 +56,8 @@ function App() {
             <Route path='/gallery' element={<About/>} ></Route>
             <Route path='/contact' element={<Home/>} ></Route>
         </Route>
-
-        
       </Routes>
     </Router>
- 
-     
      <button className='scroll-btn' style={{visibility: visible ? "visible" : "hidden", opacity: visible ? 1 : 0}} onClick={scrolltoTop}>Scroll Up <FontAwesomeIcon style={{marginLeft: '5px'}} icon={faArrowUp} /> </button>
     </>
   )

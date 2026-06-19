@@ -32,7 +32,6 @@ const MainLayout = () => {
   }, []);
 
   useEffect(() => {
-    setLoading(true);
 
     const timer = setTimeout(() => {
       setLoading(false);

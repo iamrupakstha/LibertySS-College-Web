@@ -1,0 +1,345 @@
+/* Training Bootcamp - Modern Design */
+
+.training-bootcamp {
+  position: relative;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+  overflow: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.bootcamp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Decorative Orbs */
+.bootcamp-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--primary-color, #7d2926);
+  top: -100px;
+  right: -100px;
+  animation: floatOrb 8s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 300px;
+  height: 300px;
+  background: var(--primary-light, #9a423f);
+  bottom: -50px;
+  left: -50px;
+  animation: floatOrb 10s ease-in-out infinite reverse;
+}
+
+.orb-3 {
+  width: 200px;
+  height: 200px;
+  background: var(--secondary-color, #f0f7f9);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: floatOrb 12s ease-in-out infinite;
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+/* Header Section */
+.bootcamp-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+/* Partners Section */
+.bootcamp-partners {
+  margin-bottom: 4rem;
+}
+
+.partners-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+}
+
+.partners-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light, #4a5568);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.partners-line {
+  flex: 1;
+  max-width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-color, #7d2926), transparent);
+}
+
+.bootcamp-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.5rem;
+  background: var(--white, #ffffff);
+  border-radius: var(--border-radius, 10px);
+  box-shadow: var(--shadow-sm, 0 2px 8px rgba(0, 0, 0, 0.06));
+  transition: all 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-lg, 0 10px 30px rgba(0, 0, 0, 0.15));
+}
+
+.partner-logo-wrapper {
+  width: 120px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.partner-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(0);
+  transition: all 0.3s ease;
+}
+
+.partner-card:hover .partner-logo {
+  transform: scale(1.08);
+}
+
+.partner-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-color, #01051f);
+  margin: 0;
+  text-align: center;
+}
+
+/* CTA Section */
+.bootcamp-cta {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, var(--primary-color, #7d2926), var(--primary-dark, #5f1e1c));
+  border-radius: var(--border-radius-lg, 20px);
+  box-shadow: var(--shadow-lg, 0 10px 30px rgba(0, 0, 0, 0.15));
+  position: relative;
+  overflow: hidden;
+}
+
+.bootcamp-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+  animation: shimmer 10s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-20%, -20%); }
+}
+
+.cta-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white, #ffffff);
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--white, #ffffff);
+  color: var(--primary-color, #7d2926);
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  gap: 1.2rem;
+}
+
+.cta-button:active {
+  transform: scale(0.97);
+}
+
+.cta-button svg {
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover svg {
+  transform: translateX(6px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bootcamp-title {
+    font-size: 2.8rem;
+  }
+  
+  .bootcamp-logo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .training-bootcamp {
+    padding: 3rem 1.5rem;
+  }
+  
+  .bootcamp-title {
+    font-size: 2.2rem;
+  }
+  
+  .bootcamp-subtitle {
+    font-size: 1rem;
+  }
+  
+  .bootcamp-stats {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .stat-icon {
+    font-size: 1.5rem;
+    padding: 0.6rem;
+  }
+  
+  .stat-number {
+    font-size: 1.4rem;
+  }
+  
+  .bootcamp-logo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+  
+  .partner-logo-wrapper {
+    width: 80px;
+    height: 60px;
+  }
+  
+  .bootcamp-cta {
+    padding: 2rem 1.5rem;
+  }
+  
+  .cta-text {
+    font-size: 1.1rem;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .training-bootcamp {
+    padding: 2rem 1rem;
+  }
+  
+  .bootcamp-title {
+    font-size: 1.8rem;
+  }
+  
+  .bootcamp-stats {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .stat-card {
+    flex-direction: row;
+    text-align: left;
+    padding: 0.8rem 1rem;
+  }
+  
+  .bootcamp-logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  
+  .partner-card {
+    padding: 1rem;
+  }
+  
+  .partner-logo-wrapper {
+    width: 60px;
+    height: 50px;
+  }
+  
+  .partner-name {
+    font-size: 0.65rem;
+  }
+  
+  .cta-text {
+    font-size: 1rem;
+  }
+  
+  .cta-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
