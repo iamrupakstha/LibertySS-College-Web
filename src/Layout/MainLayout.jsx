@@ -6,17 +6,15 @@ import Spinner from '../components/Spinner'
 import PopupNotice from '../components/PopupNotice'
 
 const MainLayout = () => {
-    const [showPopup, setShowPopup] = useState(false);
-    const location = useLocation();
+  const [loading, setLoading] = useState(true);
+  const [showPopup, setShowPopup] =useState(false);
 
-    useEffect(() => {
-        const isHomePage = window.location.pathname === '/' || window.location.pathname === '/LibertySS-College-Web/';
-        if (isHomePage) {
-            setShowPopup(true);
-        }
-    }, []);
+  const location = useLocation();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of f7efc22 (update-1)
   // first load
   useEffect(() => {
     const navEntries = performance.getEntriesByType('navigation');
@@ -38,6 +36,10 @@ const MainLayout = () => {
   }, []);
 
   useEffect(() => {
+<<<<<<< HEAD
+=======
+    setLoading(true);
+>>>>>>> parent of f7efc22 (update-1)
 
     const timer = setTimeout(() => {
       setLoading(false);
@@ -62,22 +64,16 @@ const MainLayout = () => {
         <Footer/>
       </>
       )
+<<<<<<< HEAD
 =======
     const handleClosePopup = () => {
         setShowPopup(false);
 >>>>>>> 4d256a67b157a3f54204c8bd7b518c85e731ac25
+=======
+>>>>>>> parent of f7efc22 (update-1)
     }
-
-    return (
-        <div>
-            {showPopup && <PopupNotice onClose={handleClosePopup} />}
-            <Navbar/>
-            <main>
-                <Outlet/>
-            </main>
-            <Footer/>
-        </div>
-    )
+    </div>
+  )
 }
 
 export default MainLayout

@@ -1,85 +1,97 @@
 import React from 'react'
-import PageHeader from '../components/PageHeader';
+import PageHeader from '../components/PageHeader'
 import hmImg from '../assets/science/HM.jpg'
-import '../styles/Program.css';
 
 const HM = () => {
-    return (
-        <div className="program-details">
-
-            <div className="program-container">
-                <h1>+2 Hotel Management</h1>
-
-                <div className="program-content-grid">
-                    <div className="info-card">
-                        <p className="intro-text">
-                            The +2 Hotel Management program at Liberty SS/College is a specialized course designed to equip students with practical skills and theoretical knowledge required for the global hospitality industry. We combine academic excellence with hands-on training in food production, front office operations, and housekeeping to prepare students for the fast-growing world of tourism and hospitality.
-                        </p>
-
-                        <div className="requirements-section">
-                            <h2>Program Overview</h2>
-                            <table className="requirements-table">
-                                <thead>
-                                    <tr>
-                                        <th>Feature</th>
-                                        <th>Details</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Duration</td>
-                                        <td>2 Years (Grade 11 & 12)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Specialization</td>
-                                        <td>Hospitality & Tourism Management</td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div className="curriculum-section">
-                            <h2>Academic Curriculum</h2>
-                            <div className="curriculum-grid">
-                                <div className="grade-box">
-                                    <h3>Subjects</h3>
-                                    <ul className="subject-list">
-                                        <li>Compulsory English</li>
-                                        <li>Compulsory Nepali</li>
-                                        <li>Basic Mathematics /Social Studies</li>
-                                        <li>Hotel Management</li>
-                                        <li>Tourism & Mountaineering</li>
-                                        <li>Accountancy </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="sidebar-sticky">
-                        <div className="career-box">
-                            <h3>Industry Verticals</h3>
-                            <div className="career-item">
-                                <h4>Hospitality Operations</h4>
-                                <p>Careers in 5-star hotels, resorts, and international hotel chains as managers and executives.</p>
-                            </div>
-                            <div className="career-item">
-                                <h4>Culinary Arts</h4>
-                                <p>Opportunities in professional kitchens, food production, and bakery operations globally.</p>
-                            </div>
-                            <div className="career-item">
-                                <h4>Tourism & Airlines</h4>
-                                <p>Pathway to careers in travel agencies, airline ground handling, and cruise ships.</p>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+  return (
+    <div>
+        <PageHeader/>
+        <section>
+           <div className="programs">
+           
+                           <h1>+2 Science</h1>
+                           <div className="intro">
+                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio adipisci officia odit ipsa consectetur a tenetur eligendi voluptatum corporis magnam reiciendis animi hic, unde nam repellat quam architecto molestiae. Doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore placeat modi mollitia, enim quae, exercitationem perferendis nisi animi quas eligendi alias, ea omnis nemo suscipit dolores deleniti quasi doloremque architecto!</p>
+           
+                               <table>
+                                   <tr>
+                                       <th>Programs</th>
+                                       <th>Duration</th>
+                                       <th>Credit Hours</th>
+                                       <th>Board</th>
+                                   </tr>
+                                   <tr>
+                                       <td>+2 Sciecne</td>                        
+                                       <td>2 Years</td>
+                                       <td>120</td>
+                                       <td>NEB</td>
+                                   </tr>
+                               </table>
+                           </div>
+                           <div className="course-module">
+                               <div className="module">
+                                   <h3>Course Module</h3>
+           
+                                   <div className="info-module">
+           
+                                       <div className="class">
+           
+                                       <div className="class11">
+                                           <h3>Class XI</h3>
+                                       <ol>
+                                            <li>Com. Nepali</li>
+                                            <li>Com. English</li>
+                                            <li>Basic Mathematics OR Social Studies</li>
+                                            <li>Physics</li>
+                                            <li>Chemistry</li>
+                                            <li>Biology or Computer Science</li>
+                                       </ol>
+                                   </div>
+           
+                                   <div className="class11">
+                                           <h3>Class XII</h3>
+                                       <ol>
+                                            <li>Com. Nepali</li>
+                                            <li>Com. English</li>
+                                            <li>Basic Mathematics OR Social Studies</li>
+                                            <li>Physics</li>
+                                            <li>Chemistry</li>
+                                            <li>Biology or Computer Science</li>
+                                       </ol>
+                                   </div>
+           
+                                   <div className="career">
+                                       <h3>Careers</h3>
+                                       <ol>
+                                           <li>Engineering <p>-Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque molestias id expedita. Dicta numquam aliquam, praesentium earum repudiandae mollitia velit, dolore rem ratione ullam a quo unde? Dolore, asperiores!</p> </li>
+                                           <li>Medical Sectors <p>-Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque molestias id expedita. Dicta numquam aliquam, praesentium earum repudiandae mollitia velit, dolore rem ratione ullam a quo unde? Dolore, asperiores!</p> </li>
+                                           <li>IT coures - BIT/BCS/BSc. CSIT<p>-Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque molestias id expedita. Dicta numquam aliquam, praesentium earum repudiandae mollitia velit, dolore rem ratione ullam a quo unde? Dolore, asperiores!</p> </li>
+                                           <li>Business/Management <p>-Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque molestias id expedita. Dicta numquam aliquam, praesentium earum repudiandae mollitia velit, dolore rem ratione ullam a quo unde? Dolore, asperiores!</p> </li>
+                                           <li>Arts <p>-Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque molestias id expedita. Dicta numquam aliquam, praesentium earum repudiandae mollitia velit, dolore rem ratione ullam a quo unde? Dolore, asperiores!</p> </li>
+                                           <li>Education<p>-Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque molestias id expedita. Dicta numquam aliquam, praesentium earum repudiandae mollitia velit, dolore rem ratione ullam a quo unde? Dolore, asperiores!</p> </li>
+                                       </ol>
+                                   </div>
+                                   </div>
+           
+                                   <div className="image">
+                                       <img src={hmImg} height="auto" width='300px'                             alt="Science" />
+                                   </div>
+                                   
+           
+                                   </div>
+           
+                                   
+                                   
+                               </div>
+                               <div className="image">
+           
+                               </div>
+                           </div>
+                       </div>
+                   
+        </section>
+    </div>
+  )
 }
 
 export default HM
