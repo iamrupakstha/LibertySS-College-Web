@@ -13,12 +13,9 @@ import Message from './pages/Message';
 import Science from './pages/Science';
 import { Management } from './pages/Management';
 import HM from './pages/HM';
-<<<<<<< HEAD
-import ScrollToTop from './components/ScrollToTop';
-import Contact from './pages/Contact';
+
 import Facilities from './pages/Facilities';
-=======
->>>>>>> parent of f7efc22 (update-1)
+
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -57,15 +54,7 @@ function App() {
             <Route path='/science' element={<Science/>} ></Route>
             <Route path='/management' element={<Management/>} ></Route>
             <Route path='/hm' element={<HM/>} ></Route>
-            
-<<<<<<< HEAD
-            <Route path='/contact' element={<Contact/>} ></Route>
-            <Route path='/facilities' element={<Facilities/>} ></Route>
-=======
-            <Route path='/resources' element={<Home/>} ></Route>
-            <Route path='/gallery' element={<About/>} ></Route>
-            <Route path='/contact' element={<Home/>} ></Route>
->>>>>>> parent of f7efc22 (update-1)
+  
         </Route>
       </Routes>
     </Router>
