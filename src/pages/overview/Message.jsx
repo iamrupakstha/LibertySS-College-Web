@@ -1,10 +1,10 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../styles/Message.css';
-import principalImg  from '../assets/tanka-bhattarai.png';
-import directorImg  from '../assets/purna.png';
+import './Message.css';
+import principalImg  from '../../assets/tanka-bhattarai.png';
+import directorImg  from '../../assets/purna.png';
 
-import PageHeader from '../components/PageHeader';
+import PageHeader from '../../components/PageHeader';
 const Message = () => {
   return (
     <div>

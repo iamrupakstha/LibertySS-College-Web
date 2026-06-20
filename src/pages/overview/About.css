@@ -1,0 +1,474 @@
+
+
+:root {
+    --primary-color: #7d2926;
+    --primary-dark: #5f1e1c;
+    --primary-light: #9a423f;
+    --secondary-color: #f0f7f9;
+    --secondary-dark: #dce8ec;
+    --text-color: #01051f;
+    --text-light: #4a5568;
+    --white: #ffffff;
+    --gray-light: #f8fafc;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --transition: 0.3s ease;
+    --transition-fast: 0.2s ease;
+    --border-radius: 10px;
+    --border-radius-lg: 20px;
+}
+
+/* --- About Section --- */
+.about {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* --- About Content Card --- */
+.about-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.span-text {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    padding-inline: 5px;
+}
+.about-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition), box-shadow var(--transition);
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.about-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.about-img img:hover {
+    transform: scale(1.02);
+    filter: brightness(0.98);
+}
+
+/* --- Horizontal Timeline (Our Journey) --- */
+.timeline-container {
+    margin: 4rem 0 5rem;
+}
+
+.timeline-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+.timeline-container h1::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    margin: 10px auto 0;
+    border-radius: 4px;
+}
+
+.horizontal-timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem 1.5rem;
+    position: relative;
+    padding: 1rem 0.5rem;
+}
+
+/* Timeline line between items (CSS-only) */
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 150px;
+    max-width: 200px;
+    position: relative;
+    padding: 0 0.5rem;
+}
+
+.timeline-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    transition: all var(--transition);
+    z-index: 2;
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+.timeline-item:hover .timeline-icon {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.08);
+    box-shadow: 0 0 0 4px rgba(125, 41, 38, 0.2);
+}
+
+.timeline-content {
+    text-align: center;
+    background: var(--white);
+    padding: 0.75rem 0.5rem;
+    border-radius: var(--border-radius);
+    transition: all var(--transition);
+    width: 100%;
+}
+
+.timeline-item:hover .timeline-content {
+    background: var(--gray-light);
+    transform: translateY(-3px);
+}
+
+.timeline-year {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    display: inline-block;
+    padding: 0.15rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.timeline-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0.25rem 0 0.2rem;
+}
+
+.timeline-content p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* timeline line (connector) using pseudo-element */
+.timeline-item:not(:last-child) .timeline-line {
+    display: none; /* we use CSS pseudo for cleaner design */
+}
+
+/* Instead of .timeline-line, we create a connector via ::after on .timeline-item */
+.horizontal-timeline .timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 30px; /* center of icon */
+    left: calc(100% - 0.5rem);
+    width: calc(100% - 1rem);
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-light), var(--secondary-dark));
+    z-index: 0;
+    opacity: 0.5;
+    border-radius: 4px;
+}
+
+/* adjust for small screens: hide line if wrap */
+@media (max-width: 700px) {
+    .horizontal-timeline .timeline-item:not(:last-child)::after {
+        display: none;
+    }
+    .horizontal-timeline {
+        gap: 1.5rem;
+    }
+}
+
+/* --- Our Values Section (Cards) --- */
+.our-values {
+    margin: 4rem 0 2rem;
+}
+
+.our-values h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.our-values h1::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    margin: 10px auto 0;
+    border-radius: 4px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.cards-content {
+    background: var(--white);
+    padding: 2.2rem 1.8rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: all var(--transition);
+    border: 1px solid rgba(125, 41, 38, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.cards-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition);
+}
+
+.cards-content:hover::before {
+    transform: scaleX(1);
+}
+
+.cards-content:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--secondary-dark);
+}
+
+.mission-icon {
+    font-size: 3.2rem;
+    background: var(--secondary-color);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+    transition: all var(--transition);
+    color: var(--primary-color);
+}
+
+.cards-content:hover .mission-icon {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.cards-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+}
+
+.cards-content p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .about-card {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .about-img img {
+        max-height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 1.5rem 1rem 3rem;
+    }
+
+    .about-content h2,
+    .timeline-container h1,
+    .our-values h1 {
+        font-size: 2rem;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .horizontal-timeline {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.8rem;
+    }
+
+    .timeline-item {
+        max-width: 280px;
+        width: 100%;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+
+    .timeline-item:not(:last-child)::after {
+        display: none; /* hide line on mobile */
+    }
+
+    .timeline-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    .timeline-content {
+        text-align: left;
+        padding: 0.2rem 0;
+        background: transparent;
+    }
+
+    .timeline-content h3 {
+        font-size: 0.95rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.8rem;
+    }
+
+    .timeline-year {
+        font-size: 0.75rem;
+        padding: 0 0.7rem;
+    }
+
+    .mission-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-card {
+        padding: 1rem;
+    }
+
+    .timeline-item {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .timeline-content {
+        text-align: center;
+    }
+
+    .cards-content {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* --- subtle animations for modern feel --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-card,
+.timeline-container,
+.our-values {
+    animation: fadeInUp 0.6s ease both;
+}
+
+.timeline-container {
+    animation-delay: 0.1s;
+}
+
+.our-values {
+    animation-delay: 0.2s;
+}
+
+/* extra polish for PageHeader integration (if any) */
+.page-header + .about {
+    padding-top: 1rem;
+}

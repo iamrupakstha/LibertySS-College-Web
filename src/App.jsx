@@ -1,20 +1,24 @@
 import './App.css'
-import Home from './pages/Home'
-import About from './pages/About'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import MainLayout from './Layout/MainLayout';
 import { useEffect, useState } from 'react';
-import Spinner from './components/Spinner';
-import Academics from './pages/Academics';
 import {  faArrowUp } from '@fortawesome/free-solid-svg-icons';
-import Team from './pages/Team';
-import Message from './pages/Message';
-import Science from './pages/Science';
-import { Management } from './pages/Management';
-import HM from './pages/HM';
+// pages
+import Home from './pages/home/Home'
 
-import Facilities from './pages/Facilities';
+import MainLayout from './Layout/MainLayout';
+import Spinner from './components/Spinner';
+// overview
+import About from './pages/overview/About'
+import Academics from './pages/overview/Academics';
+import Team from './pages/overview/Team';
+import Message from './pages/overview/Message';
+// programs
+import Science from './pages/programs/Science';
+import { Management } from './pages/programs/Management';
+import HM from './pages/programs/HM';
+
+import Facilities from './pages/Facilities/Facilities';
 
 
 function App() {

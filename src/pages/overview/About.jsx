@@ -1,10 +1,9 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import libertyImage from '../assets/liberty.avif';
-import '../styles/About.css';
-
+import libertyImage from '../../assets/liberty.avif';
+import './About.css';
 import { Timeline } from 'primereact/timeline';
-import PageHeader from '../components/PageHeader';
+import PageHeader from '../../components/PageHeader';
 const About = () => {
 
   // timeline
@@ -21,7 +20,7 @@ const About = () => {
       <PageHeader title="About Us"/>
       <section className='about'>
         <div className="about-content">
-          <h2>About Us</h2>
+          <h2>About <span className='span-text'>Us</span></h2>
           <div className="about-card">
             <div className="about-text">
               <p>Liberty Secondary School and College, established in 2013, is a premier educational institution in Birtamode, Jhapa. We are committed to providing quality education and fostering holistic development in our students. With a dedicated team of experienced educators, we offer a comprehensive curriculum that prepares students for academic excellence and future success. Our state-of-the-art facilities, including modern classrooms, science labs, and sports amenities, create an ideal learning environment. We prioritize character building, critical thinking, and creativity, ensuring our students are well-equipped to face the challenges of the modern world. At Liberty SS/College, we strive to nurture responsible citizens who contribute positively to society.</p>

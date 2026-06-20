@@ -140,11 +140,6 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                         <li onClick={() => setMenuOpen(false)}>
-                            <NavLink to="/resources" className={({ isActive }) => isActive ? "active" : ""}>
-                                Resources
-                            </NavLink>
-                        </li>
-                        <li onClick={() => setMenuOpen(false)}>
                             <NavLink to="/gallery" className={({ isActive }) => isActive ? "active" : ""}>
                                 Gallery
                             </NavLink>

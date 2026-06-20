@@ -1,10 +1,10 @@
 import React from 'react'
-import '../styles/Home.css'
-import bgvideo from '../assets/bgvideo.mp4';
-import welcomeImg from '../assets/welcome.jpeg';
-import scienceImg from '../assets/science.jpg';
-import managementImg from '../assets/management.jpg';
-import hmImg from '../assets/HM.jpg';
+import './Home.css'
+import bgvideo from '../../assets/bgvideo.mp4';
+import welcomeImg from '../../assets/welcome.jpeg';
+import scienceImg from '../../assets/science.jpg';
+import managementImg from '../../assets/management.jpg';
+import hmImg from '../../assets/HM.jpg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -12,9 +12,9 @@ import { faAlarmClock, faBookOpen, faChalkboardUser,faGraduationCap,faQuoteLeft,
 import { useEffect } from 'react';
 
 import { NavLink } from 'react-router-dom';
-import Testimonials from './home/Testimonials';
-import TrainingBootcamp from './home/TrainingBootcamp';
-import LatestNotice from './home/Notice';
+import Testimonials from './Testimonials';
+import TrainingBootcamp from './TrainingBootcamp';
+import LatestNotice from './Notice';
 const Home = () => {
  
 useEffect(() => {

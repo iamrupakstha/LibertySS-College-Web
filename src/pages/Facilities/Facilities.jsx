@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Facilities.css';
+import '../../styles/Facilities.css';
 
 const facilities = [
     { title: 'AC Classrooms', color: '#0ea5e9' },
