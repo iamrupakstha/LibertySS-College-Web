@@ -1,0 +1,563 @@
+/* src/styles/Facilities.css */
+
+/* --- Root Variables --- */
+:root {
+    --primary-color: #7d2926;
+    --primary-dark: #5f1e1c;
+    --primary-light: #9a423f;
+    --secondary-color: #f0f7f9;
+    --secondary-dark: #f0f7f9;
+    --text-color: #01051f;
+    --text-light: #4a5568;
+    --white: #ffffff;
+    --gray-light: #f8fafc;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --transition: 0.3s ease;
+    --transition-fast: 0.2s ease;
+    --border-radius: 10px;
+    --border-radius-lg: 20px;
+}
+
+/* --- Global Font --- */
+.facilities-page,
+.facilities-page * {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* --- Facilities Page --- */
+.facilities-page {
+    background: var(--gray-light);
+    min-height: 100vh;
+    padding-bottom: 2rem;
+}
+
+/* --- Facilities Section --- */
+.fac-section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 2rem;
+}
+
+.fac-section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.fac-section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0 0 0.5rem 0;
+    position: relative;
+    display: inline-block;
+}
+
+.fac-section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    border-radius: 4px;
+}
+
+.fac-section-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+/* --- Facilities Grid --- */
+.fac-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* --- Facility Card --- */
+.fac-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(125, 41, 38, 0.06);
+    transition: all var(--transition);
+    position: relative;
+    animation: fadeInUp 0.6s ease both;
+    cursor: default;
+}
+
+.fac-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-dark);
+}
+
+/* Card Image */
+.fac-card-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: var(--secondary-color);
+}
+
+.fac-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.fac-card:hover .fac-card-image img {
+    transform: scale(1.08);
+}
+
+/* Image Overlay */
+.fac-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.fac-card:hover .fac-card-overlay {
+    opacity: 1;
+}
+
+.fac-card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all var(--transition);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-sm);
+}
+
+.fac-card:hover .fac-card-icon {
+    transform: translateY(0) scale(1.1);
+}
+
+/* Card Content */
+.fac-card-content {
+    padding: 1.5rem;
+    position: relative;
+}
+
+.fac-card-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0 0 0.5rem 0;
+    min-height: 2.8rem;
+    line-height: 1.3;
+}
+
+.fac-card-content p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+    font-weight: 300;
+}
+
+.fac-card-indicator {
+    width: 40px;
+    height: 3px;
+    border-radius: 4px;
+    transition: all var(--transition);
+}
+
+.fac-card:hover .fac-card-indicator {
+    width: 60px;
+}
+
+/* Card Border Accent */
+.fac-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 2;
+}
+
+.fac-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* --- Tagline Banner --- */
+.fac-tagline {
+    background: #f0f7f9;
+    padding: 3rem 2rem;
+    margin: 1rem 1.5rem 2rem;
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.fac-tagline::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.fac-tagline::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.tagline-content {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-color);
+    position: relative;
+    z-index: 1;
+    line-height: 1.6;
+}
+
+.fac-quote {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    opacity: 0.6;
+    font-family: Georgia, serif;
+    margin: 0 0.3rem;
+}
+
+/* --- Hero Stats --- */
+.fac-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+.hero-stat {
+    text-align: center;
+    color: var(--white);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .fac-grid {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .fac-section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .fac-card-image {
+        height: 200px;
+    }
+
+    .fac-tagline {
+        padding: 2.5rem 1.5rem;
+        margin: 1rem 1rem 2rem;
+    }
+
+    .tagline-content {
+        font-size: 1.2rem;
+    }
+
+    .fac-hero-stats {
+        gap: 2.5rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .fac-section {
+        padding: 2rem 1rem 1rem;
+    }
+
+    .fac-section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .fac-section-header p {
+        font-size: 1rem;
+    }
+
+    .fac-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.2rem;
+    }
+
+    .fac-card-image {
+        height: 180px;
+    }
+
+    .fac-card-content {
+        padding: 1.2rem;
+    }
+
+    .fac-card-content h3 {
+        font-size: 1rem;
+        min-height: 2.4rem;
+    }
+
+    .fac-card-content p {
+        font-size: 0.85rem;
+    }
+
+    .fac-tagline {
+        padding: 2rem 1.2rem;
+        margin: 0.8rem 0.8rem 1.5rem;
+        border-radius: var(--border-radius);
+    }
+
+    .tagline-content {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .fac-quote {
+        font-size: 2rem;
+    }
+
+    .fac-hero-stats {
+        gap: 2rem;
+    }
+
+    .stat-number {
+        font-size: 1.6rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .fac-card-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .fac-section {
+        padding: 1.5rem 0.8rem 0.8rem;
+    }
+
+    .fac-section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .fac-section-header p {
+        font-size: 0.9rem;
+    }
+
+    .fac-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .fac-card-image {
+        height: 200px;
+    }
+
+    .fac-card-content h3 {
+        font-size: 1rem;
+        min-height: auto;
+    }
+
+    .fac-tagline {
+        padding: 1.5rem 1rem;
+        margin: 0.5rem 0.5rem 1rem;
+    }
+
+    .tagline-content {
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .fac-quote {
+        font-size: 1.5rem;
+    }
+
+    .fac-hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .fac-card-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .fac-card::before {
+        height: 3px;
+    }
+}
+
+/* --- Dark Mode Support (Optional) --- */
+@media (prefers-color-scheme: dark) {
+    .facilities-page {
+        background: #0f0f1a;
+    }
+
+    .fac-card {
+        background: #1a1a2e;
+        border-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .fac-card-content h3 {
+        color: #e2e8f0;
+    }
+
+    .fac-card-content p {
+        color: #94a3b8;
+    }
+
+    .fac-section-header h2 {
+        color: #e2e8f0;
+    }
+
+    .fac-section-header p {
+        color: #94a3b8;
+    }
+
+    .fac-card-image {
+        background: #1a1a2e;
+    }
+
+    .fac-card-icon {
+        background: rgba(30, 30, 50, 0.95);
+    }
+}
+
+/* --- Loading Animation for Images --- */
+.fac-card-image img {
+    opacity: 0;
+    animation: imageLoad 0.6s ease forwards;
+}
+
+.fac-card-image img[loading="lazy"] {
+    opacity: 1;
+}
+
+@keyframes imageLoad {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* --- Smooth Scrollbar --- */
+.facilities-page::-webkit-scrollbar {
+    width: 8px;
+}
+
+.facilities-page::-webkit-scrollbar-track {
+    background: var(--gray-light);
+}
+
+.facilities-page::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+.facilities-page::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}

@@ -595,3 +595,70 @@ hr {
 .mt-3 { margin-top: 1rem; }
 .mb-2 { margin-bottom: 0.5rem; }
 .mb-3 { margin-bottom: 1rem; }
+
+/* Admin Link Styles */
+.admin-footer-link {
+    list-style: none;
+    margin-top: 0.5rem;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+}
+
+.admin-footer-link:hover {
+    opacity: 1;
+}
+
+.admin-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 0.2rem 0;
+    transition: all 0.3s ease;
+}
+
+.admin-link:hover {
+    color: var(--primary-color);
+}
+
+.admin-text {
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.admin-link:hover .admin-text {
+    opacity: 1;
+}
+
+.admin-link svg {
+    font-size: 0.7rem;
+}
+
+/* Click hint for logo */
+.click-hint {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-footer-link {
+        opacity: 0.5;
+    }
+    
+    .admin-text {
+        opacity: 1;
+        font-size: 0.7rem;
+    }
+}

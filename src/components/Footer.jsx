@@ -1,12 +1,39 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
 import '../styles/Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import Logo from '../assets/logo/Logo.png'
-import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faLocationDot, faPhone, faLock} from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
+  const [clickCount, setClickCount] = useState(0);
+  const [clickTimer, setClickTimer] = useState(null);
+  const navigate = useNavigate();
+
+  // Secret admin access - click on logo 5 times
+  const handleLogoClick = () => {
+    setClickCount(prev => prev + 1);
+    
+    // Clear timer if exists
+    if (clickTimer) {
+      clearTimeout(clickTimer);
+    }
+    
+    // Reset click count after 3 seconds
+    const timer = setTimeout(() => {
+      setClickCount(0);
+    }, 3000);
+    setClickTimer(timer);
+    
+    // If clicked 5 times, redirect to admin
+    if (clickCount >= 4) {
+      setClickCount(0);
+      clearTimeout(timer);
+      navigate('/admin/login');
+    }
+  };
+
   return (
     <div>
         <div className="apply">
@@ -29,7 +56,23 @@ const Footer = () => {
         </div>
       <div className="footer"> 
         <div className="f-left">
-          <img src={Logo} alt="Footer logo" />
+          <img 
+            src={Logo} 
+            alt="Footer logo" 
+            onClick={handleLogoClick}
+            style={{ cursor: 'pointer' }}
+            title={`Click ${5 - clickCount} more times for admin access`}
+          />
+          {clickCount > 0 && (
+            <div className="click-hint" style={{ 
+              fontSize: '0.7rem', 
+              color: 'var(--primary-color)',
+              marginTop: '0.3rem',
+              opacity: 0.001
+            }}>
+              🔑 {clickCount}/5
+            </div>
+          )}
           <p className='logo-subtitle'>Join a community dedicated to academic excellence and real-world impact. Your transformative journey starts at Liberty SS/College.</p>
         
         <div className="social-links">
@@ -92,6 +135,13 @@ const Footer = () => {
                                 Contact
                                 </NavLink>
                             </li>
+                            {/* Admin Access Link - Hidden but accessible */}
+                            <li className="admin-footer-link">
+                                <NavLink to="/admin/login" className="admin-link">
+                                    <FontAwesomeIcon icon={faLock} />
+                                    <span className="admin-text">Admin Panel</span>
+                                </NavLink>
+                            </li>
                         </ul>
         </div>
 
@@ -107,7 +157,7 @@ const Footer = () => {
         </div>
         <hr />
         <div className="footer-bottom">
-            <p>&#169; Copyright {new Date().getFullYear()}. Liberty SS/COllege. All right reserved. Powered by❤️<a href="www.rupak63.com.np" target='_blank' rel="noopener noreferrer">Rupak Shrestha</a> </p>
+            <p>&#169; Copyright {new Date().getFullYear()}. Liberty SS/College. All right reserved. Powered by❤️<a href="www.rupak63.com.np" target='_blank' rel="noopener noreferrer">Rupak Shrestha</a> </p>
         </div>
 
       </div>  
