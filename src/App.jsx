@@ -29,6 +29,7 @@ import Notices from './pages/notice/Notice';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminNotices from './components/AdminNotices';
 import ProtectedRoute from './components/ProtectedRoute';
+import Contact from './pages/contact/Contact';
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -76,10 +77,12 @@ function App() {
 
             {/* Gallery */}
             <Route path='/gallery' element={<Gallery />} />
+            {/* Contact */}
+            <Route path='/contact' element={<Contact />} />
           </Route>
 
           {/* Admin Routes - No Layout (Full page, no header/footer) */}
-          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/00100" element={<AdminLogin />} />
           <Route 
             path="/admin/notices" 
             element={
