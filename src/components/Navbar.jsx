@@ -51,7 +51,6 @@ const Navbar = () => {
                     <a href="https://www.google.com/maps/search/Anarmani+Liberty+School+Birtamod" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className='icon' icon={faLocationDot} /> <span>Old Bhadrapur Road, Birtamode-5, Jhapa</span></a>
                 </div>
                 <div className="Btn">
-                    <NavLink to="./enquiry" className="enquiryBtn">Enquiry</NavLink>
                     <NavLink to="" className="loginBtn" onClick={loginAlert} >Login</NavLink>
                 </div>
             </div>

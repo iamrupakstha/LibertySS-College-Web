@@ -58,7 +58,7 @@ useEffect(() => {
                     <p>Empowering the next generation with world-class education, modern facilities, and a vibrant campus community — right in the heart of Jhapa.</p>
 
                     <button className='explore-btn'><NavLink to='/about'>Explore</NavLink></button>
-                    <button className='enquiry-btn'> <NavLink to='/enquiry'>Apply Now</NavLink></button>
+                    <button className='enquiry-btn'> <NavLink to='/contact'>Apply Now</NavLink></button>
                 </div>
                 <div className="hero-cards">
                     <div className="card">

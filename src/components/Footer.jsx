@@ -49,8 +49,15 @@ const Footer = () => {
                 </div>
 
                 <div className="enquiry">
-                    <button>Apply Now</button>
-                    <button>Contact Now</button>
+                    
+                    <NavLink to="/contact" >
+                        <button>Apply Now</button>
+                    </NavLink>
+
+                    <NavLink to="/contact">
+                        <button>Contact Now</button>
+                    </NavLink>
+                    
                 </div>
             </div>
         </div>
@@ -91,21 +98,21 @@ const Footer = () => {
 </div>
 </div>
         <div className="resources">
-            <h3>Resources</h3>
+            <h3>Programs</h3>
             <ul>
             <li>
-                <NavLink to="/courses" className='link'>
-                    Courses
+                <NavLink to="/science" className='link'>
+                    Science
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/gallery" >
-                    Gallery
+                <NavLink to="/management" >
+                    Management
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/resources" >
-                    Downloads
+                <NavLink to="/hm" >
+                    Hotel Management
                 </NavLink>
             </li>
             </ul>
@@ -115,19 +122,25 @@ const Footer = () => {
              <h3>Quick Links</h3>
                         <ul>
                             <li>
-                                <NavLink to="/">
-                                Home
-                                </NavLink>
-                            </li>
-                            <li>
                                 <NavLink to="/about">
                                 About
                                 </NavLink>
                             </li>
                             
+                            
                             <li>
                                 <NavLink to="/facilities" >
                                 Facilities
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/notice">
+                                Notice
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/gallery">
+                                Gallery
                                 </NavLink>
                             </li>
                             <li>
@@ -136,12 +149,6 @@ const Footer = () => {
                                 </NavLink>
                             </li>
                             {/* Admin Access Link - Hidden but accessible */}
-                            <li className="admin-footer-link">
-                                <NavLink to="/admin/login" className="admin-link">
-                                    <FontAwesomeIcon icon={faLock} />
-                                    <span className="admin-text">Admin Panel</span>
-                                </NavLink>
-                            </li>
                         </ul>
         </div>
 

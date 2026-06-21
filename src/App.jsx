@@ -82,7 +82,7 @@ function App() {
           </Route>
 
           {/* Admin Routes - No Layout (Full page, no header/footer) */}
-          <Route path="/admin/00100" element={<AdminLogin />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
           <Route 
             path="/admin/notices" 
             element={
